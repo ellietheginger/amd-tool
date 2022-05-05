@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "AMD Tool",
+  "version": "1",
+  "description": "A tool to aid those with AMD",
+  "browser_action": {
+    "default_title": "AMD Tool"
+  },
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": true
+  },
+  "permissions" : [
+    "activeTab",
+    "storage"
+  ]
+}

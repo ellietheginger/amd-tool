@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    overflow: hidden;
+}
+
+.magnify{
+    position: absolute;
+}
+
+/*The magnifying glass*/
+.large{
+    position: absolute;
+    /*Load the placeholder image in case the image somehow failed to load*/
+    background: url('placeholder.jpg') no-repeat;
+    display: none;
+    cursor: none;
+    outline: none;
+}
+
+/*To solve overlap bug at the edges during magnification*/
+.small {
+    display: block;
+}
