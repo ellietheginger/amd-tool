@@ -1,4 +1,4 @@
-# amd-tool
+# <i>scroll&display</i>
 
 <i>Accessibility Tool for those with AMD</i>
 
