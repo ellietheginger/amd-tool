@@ -44,8 +44,10 @@ $(function(){
             var bg_position = x_offset + "px " + y_offset + "px";
 
             // set location of display to top left corner
-            var x_position = $(".large").width() - 200;
-            var y_position = $(".large").height() - 200;
+            
+            var x_position = $(".large").width() + 1000;
+            var y_position = $(".large").height() - 225;
+            
             $(".large").css({left: x_position, top: y_position, backgroundPosition: bg_position});
         }
     })

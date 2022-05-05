@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "AMD Tool",
+  "name": "scroll&display",
   "version": "1",
   "description": "A tool to aid those with AMD",
   "browser_action": {

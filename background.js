@@ -9,15 +9,10 @@ chrome.browserAction.onClicked.addListener(function(theTab) {
         magnifierSize: 250,
         magnifierAA: false,
         magnifierCM: false,
-        magnifierShape: 10
+        magnifierShape: 10,
+        magnifierLocation: "top-left"
     }, function(items){
-        // Check if compatibility mode is enabled
         if(items.magnifierCM){
-            // Close the tab if it's a magnifier tab
-            if (theTab.title.indexOf("_Magnifying_Glass")==0){
-                chrome.tabs.remove(theTab.id);
-                return;
-            }
             // Capture the image in loseless format
             chrome.tabs.captureVisibleTab({format: "png"}, function(screenshotUrl) {
                 var viewTabUrl = chrome.extension.getURL('snapshot.html?id=' + id++)
@@ -56,7 +51,8 @@ chrome.browserAction.onClicked.addListener(function(theTab) {
                                 chrome.tabs.sendMessage(theTab.id, {
                                     snapshot_url: screenshotUrl, magnifier_str: items.magnifierStrength,
                                     magnifier_size: items.magnifierSize, magnifier_aa: items.magnifierAA,
-                                    magnifier_shape: items.magnifierShape, page_zoom: zoomFactor
+                                    magnifier_shape: items.magnifierShape, page_zoom: zoomFactor,
+                                    magnifier_location: items.magnifierLocation
                                 })
                             })
                         })

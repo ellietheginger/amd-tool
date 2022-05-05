@@ -11,8 +11,19 @@
     Display Size:
     <br>
     <input type="number" min="0" step="any" id="size">pixels
-
-
+    <br>
+    Display Location:
+    <form>
+        <input type="radio" id="top-left" name="location" value="top-left">
+        <label for="top-left">Top-Left</label><br> 
+        <input type="radio" id="top-right" name="location" value="top-right">
+        <label for="top-right">Top-Right</label><br>
+        <input type="radio" id="bottom-left" name="location" value="bottom-right">
+        <label for="bottom-left">Bottom-Left</label><br>
+        <input type="radio" id="bottom-right" name="location" value="bottom-right">
+        <label for="bottom-right">Bottom-Right</label><br>
+    </form>
+    
     <div id="status"></div>
     <button id="reset">Default</button>
     <button id="save">Apply</button>

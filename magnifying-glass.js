@@ -13,6 +13,7 @@ chrome.runtime.onMessage.addListener(function transfer(config, sender){
     var magniSize = config.magnifier_size/zoom;
     var magAA = config.magnifier_aa;
     var magniShape = config.magnifier_shape;
+    var magniLoc = config.magnifier_location;
     // Remove the listener since it's no longer needed
     chrome.runtime.onMessage.removeListener(transfer);
 
@@ -57,11 +58,23 @@ chrome.runtime.onMessage.addListener(function transfer(config, sender){
             var y_offset = -1*(e.clientY - $('#_bottom_layer').height()/2)*zoom;
             var bg_position = x_offset + "px " + y_offset + "px";
 
-            // set location of display to corner
-            var x_position = $('#_bottom_layer').width() - 200;
-            var y_position = $('#_bottom_layer').height() - 200;
+            // set location of display to chosen corner
+            if (magniLoc === "top-right") {
+                var x_position = $('#_bottom_layer').width() + 1000;
+                var y_position = $('#_bottom_layer').height() - 225;
+            } else if (magniLoc === "top-left") {
+                var x_position = $('#_bottom_layer').width() -225;
+                var y_position = $('#_bottom_layer').height() - 225;
+            } else if (magniLoc === "bottom-left") {
+                var x_position = $('#_bottom_layer').width() - 225;
+                var y_position = $('#_bottom_layer').height() + 225;
+            } else if (magniLoc === "bottom-right") {
+                var x_position = $('#_bottom_layer').width() + 1000;
+                var y_position = $('#_bottom_layer').height() + 225;
+            };
 
             $("#_bottom_layer").css({left: x_position, top: y_position, backgroundPosition: bg_position});
+
         };
     });
 
