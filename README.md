@@ -1,4 +1,11 @@
 # amd-tool
 
-this is the github repository created for my work on my honours project. the project i have designed and implemented is for the use of those who live with macular eye degeneration, more commonly referenced as AMD. The tool allows a user to scroll their page with their cursor, and display that which their cursor overlays in a seperate part of the screen. 
-the most prominent symptom of macular eye degeneration is one's loss of their field of vision, beginning in the center and spreading outwards. this tool would allow a user to continue using their web browser and websites that they may want to access, and not miss that which is outwuith their field of vision. the main focal point of this project is to bring awareness to this condition, and to increase accessibility of the Google web browser for those who experience this condition.
+<i>Accessibility Tool for those with AMD</i>
+
+<b>Requirements</b>
+
+<i>scroll&display</i> is a Google Chrome Extension, with the only requirement being the us eof the Google Chrome browser.
+
+<b> Installation </b>
+
+At the current time, <i>scroll&display</i> is not on the Google Chrome extension store, however it can be uploaded and unpacked manually to be used on the Google Chrome browser. 
