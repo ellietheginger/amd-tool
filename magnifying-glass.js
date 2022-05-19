@@ -1,3 +1,5 @@
+// code parts built from tutorial from TheCodePLayer.com
+
 chrome.runtime.onMessage.addListener(function transfer(config, sender){
     // Do nothing if a magnifying glass has already been summoned
     if (document.getElementById("_bottom_layer")){

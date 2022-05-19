@@ -1,10 +1,10 @@
-// set the url of image to be magnified
+// parts of code built from tutorial from TheCodePlayer.com
+
 function setScreenshotUrl(url) {
     document.getElementById("top_layer").src = url;
     document.getElementById("bottom_layer").style.background = "url('" + url + "') no-repeat";
 };
 
-// Set the magnifier's attributes according to user's preference
 function setMagnifier(strength, magniSize, magAA, magniShape){
     var magnifier = document.getElementById("bottom_layer");
     if (magAA){
@@ -21,7 +21,6 @@ function setMagnifier(strength, magniSize, magAA, magniShape){
                                  "inset 0 0 " + 40/strength + "px "+ 2/strength + "px rgba(0, 0, 0, 0.25)";
 }
 
-// Adjust the magnifying glass based on cursor's position
 $(function(){
     $(".magnify").mousemove(function(e){
         // Fade-in and fade-out the glass if the mouse is inside the page
